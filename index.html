@@ -104,10 +104,12 @@
 
         </form> 
     </div>
-   
+    
+    <h2 id="num"> </h2>
+
     <p id="result1"> </p> 
 
-    <div id="btndiv1"> </div>
+    <div id="newgame"> </div>
 
     <p id="count"> </p>
 
@@ -152,15 +154,16 @@
 				    
                     if (n==num) {
                         myVar.style.display= 'none';
+                        document.querySelector('#num').innerHTML= num;
                         document.querySelector('#result1').innerHTML= 'Congrats! you won!';
-                        document.querySelector('#btndiv1').innerHTML= '<button onclick="refresh()"> New game </button>';
+                        document.querySelector('#newgame').innerHTML= '<button onclick="refresh()"> New game </button>';
 
                     } else if (n-num>=1 && n-num<=3 || num-n<=3 && num-n>=0) {
-                        document.querySelector('#result1').innerHTML= 'So close';
+                        document.querySelector('#result1').innerHTML= '"So close"';
                     } else if (num>n) {
-                        document.querySelector('#result1').innerHTML= 'Too big';
+                        document.querySelector('#result1').innerHTML= '"Too big"';
                     } else {
-                        document.querySelector('#result1').innerHTML= 'Too small';
+                        document.querySelector('#result1').innerHTML= '"Too small"';
                     }
         
 
